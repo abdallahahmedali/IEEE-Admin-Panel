@@ -1,0 +1,83 @@
+body{
+    min-height: 1000px;
+    background-image:
+    linear-gradient(309deg, rgba(4,21,48,0.95) 0%, rgba(34,94,193,0.9) 100%),
+    url('../images/ieee.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0px 0;
+}
+.logo .logo-cont{
+    width: 10em;
+    height: 10em;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid rgba(34,94,193,0.9) ;
+    position: relative;
+    top: 125px;
+}
+
+.logo img{
+    width:8em;
+}
+.form-container{
+    transition: .5s all;
+    background-color: #fff;
+    padding-top:100px !important;
+    border-radius: 10px;
+}
+
+.bootstrap-select>.dropdown-toggle{
+    background-color: #fff;
+    border:none;
+    border-bottom: 1px solid #ced4da;
+}
+
+.form-control{
+    transition: .2s all;
+    border:none;
+    border-radius: 0;
+    border-bottom: 1px solid #ced4da ;
+}
+.form-control:focus{
+    box-shadow: none;
+    border:none;
+    border-bottom: 3px solid rgba(0,134,255,1) ;
+}
+.btn-holder{
+    text-align: center;
+    padding: 20px 0;
+}
+.btn-ieee{
+    transition: .5s all;
+    border-radius: 20px;
+    padding: 10px 30px;
+    border:none;
+    color: #fff;
+    background: rgb(88,152,167);
+    background: linear-gradient(288deg, rgba(88,152,167,1) 0%, rgba(0,134,255,1) 100%);
+}
+.btn-ieee:hover{
+    border-radius: 10px;
+    padding: 10px 30px;
+    border:none;
+    color: #fff;
+}
+h5{
+    color: rgb(148, 148, 148);
+}
+.title,h5{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title span{
+    padding: 10px 0;
+    color: #222;
+    position: relative;
+    z-index: 1000;
+    font-weight: bold;
+
+}

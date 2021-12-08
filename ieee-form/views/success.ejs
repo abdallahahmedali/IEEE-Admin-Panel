@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE - Workshops admission</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/imgs/logo-wh.png">
+    <!-- Stylesheets imported -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-select.min.css">
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/media.css">
+</head>
+<body>
+    <div class="container-fluid" id="main">
+        <div class="container">
+            <div class="logo text-center row">
+                <div class="logo-cont">
+                    <img src="/images/fav.png">
+                </div>
+            </div>
+            <div class="form-container m-md-5 p-5">
+                <div class="row">
+                    <h2 class="title">
+                        <span>IEEE'22 Worshops admission</span>
+                    </h2>
+                    <h5>
+                        <span>Your application is sent successfully</span>
+                    </h5>
+                </div>
+                <table class="table text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Gender</th>
+                            <th>University</th>
+                            <th>Workshop</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%=application.name%></td>
+                            <td><%=application.email%></td>
+                            <td><%= (application.gender == 0) ? "Female" : "Male"%></td>
+                            <td><%=application.uni %></td>
+                            <td><%=application.workshops %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/bootstrap-select.min.js"></script>
+    <!-- Cutom JavaScript files -->
+    <script src="/javascripts/main.js"></script>
+</body>
+</html>

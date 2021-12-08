@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE - Workshops admission</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/imgs/logo-wh.png">
+    <!-- Stylesheets imported -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-select.min.css">
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/media.css">
+</head>
+<body>
+    <div class="container-fluid" id="main">
+        <div class="container">
+            <div class="logo text-center row">
+                <div class="logo-cont">
+                    <img src="/images/fav.png">
+                </div>
+            </div>
+            <div class="form-container m-md-5 p-5">
+                <div class="row">
+                    <h2 class="title">
+                        <span>IEEE'22 Worshops admission</span>
+                    </h2>
+                </div>
+                <form action="/form" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Fullname</label>
+                        <input type="name" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3">
+                        
+                        <label class="form-label">Gender</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="1" required name="gender" id="gendermale">
+                            <label class="form-check-label" for="gendermale">
+                                Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" value="0" required name="gender" id="genderfemale" checked>
+                            <label class="form-check-label" for="genderfemale">
+                                Female
+                            </label>
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="uni" class="form-label">University</label>
+                        <input type="name" class="form-control" id="uni" name="uni" required placeholder="Enter your university name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="wshops" class="form-label">Workshops</label>
+                        <select class="selectpicker form-control" name="workshops" required id="wshops" 
+                        data-dropup-auto="false"  data-live-search="true" title="Select a workshops">
+                            <optgroup label="AI">
+                                <option>Data Science</option>
+                                <option>Machine Learning</option>
+                                <option>Deep Learning</option>
+                              </optgroup>
+                              <optgroup label="Biomedical">
+                                <option>Data Analysis</option>
+                                <option>Biomedical course</option>
+                              </optgroup>
+                              <optgroup label="Computer">
+                                <option>Problem Solving</option>
+                                <option>OOP & Data Structure</option>
+                                <option>Front End</option>
+                                <option>Back End</option>
+                              </optgroup>
+                              <optgroup label="Embedded Systems">
+                                <option>Embedded</option>
+                                <option>Adruino</option>
+                                <option>C</option>
+                              </optgroup>
+                              <optgroup label="Electronics">
+                                <option>Digital Electronics</option>
+                                <option>Analog Electronics</option>
+                              </optgroup>
+                              <optgroup label="Power">
+                                <option>Classic Control</option>
+                                <option>PLC</option>
+                                <option>Matlab</option>
+                              </optgroup>
+                        </select>
+                            
+                          
+                    </div>
+                    <div class="mb-3 btn-holder">
+                        <button class="btn btn-ieee">Submit your application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/bootstrap-select.min.js"></script>
+    <!-- Cutom JavaScript files -->
+    <script src="/javascripts/main.js"></script>
+</body>
+</html>
