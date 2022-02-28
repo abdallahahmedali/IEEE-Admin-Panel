@@ -43,6 +43,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#">
+              <span class="hidden-xs">Hello, <%= session.user.fullname %></span>
+            </a>
+            
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+          
+        </ul>
+      </div>
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
@@ -63,6 +78,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="/users">All users</a></li>
             <li><a href="/users/add">Add new users</a></li>
           </ul>
+        </li>
+        <li>
+          <a href="/auth/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a>
         </li>
       </ul>
       <!-- /.sidebar-menu -->

@@ -5,12 +5,14 @@ const { application } = require('express');
 const { render } = require('ejs');
 const mail = require('@sendgrid/mail');
 const User = require("../models").User;
+const bcrypt = require('bcrypt');
 // sendgrid.setApiKey();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: "IEEE'22 Workshops admission" });
 });
+
 router.post('/form', function(req, res, next) {
   var application = req.body;
   var view = "success";
@@ -32,13 +34,19 @@ router.post('/form', function(req, res, next) {
       view = "failed";
     }
   });
-  User.create({
-    fullname:application.name,
-    email:application.email,
-    university:application.uni,
-    gender:application.gender,
-    workshop: application.workshops
-  }).then(user=>res.render(view, { title: "IEEE'22 Workshops status",application:application }));
+
+  bcrypt.hash(application.password, 5, function (err, hash) {
+    console.log(hash);
+    // Storing user data
+    User.create({
+      fullname:application.name,
+      email:application.email,
+      university:application.uni,
+      gender:application.gender,
+      workshop: application.workshops,
+      password: hash
+    }).then(user=>res.render(view, { title: "IEEE'22 Workshops status",application:application }));
+  });
 });
 
 module.exports = router;
